@@ -1,12 +1,11 @@
 <!doctype html>
-<html lang="es">
+<html>
   <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prueba Web Messaging Genesys</title>
+    <title>Portal de conocimiento</title>
 
-    <!-- GENESYS WEB MESSAGING -->
-    <script type="text/javascript" charset="utf-8">
+    <!-- (Opcional) Si no tienes este archivo, quítalo para evitar 404 -->
+    <!-- <link rel="stylesheet" type="text/css" href="supportcentercharset="utf-8">
       (function (g, e, n, es, ys) {
         g["_genesysJs"] = e;
         g[e] =
@@ -23,16 +22,18 @@
         document.head.appendChild(ys);
       })(window, "Genesys", "https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js", {
         environment: "prod",
-        deploymentId: "dae0ef00-d210-49a7-a94a-8741127c4da7"
+        deploymentId:
+          (new URLSearchParams(window.location.search)).get("claveImplementacion") ||
+          "dae0ef00-d210-49a7-a94a-8741127c4da7"
       });
     </script>
-    <!-- FIN GENESYS -->
   </head>
 
   <body>
-    <h1>✅ Web Messaging activo</h1>
-    <p>Si ves este texto, la página está cargando correctamente.</p>
-    <p>La burbuja de chat debe aparecer abajo a la derecha.</p>
+    <h1>✅ Portal de conocimiento</h1>
+    <p>Si ves este texto, la web está cargando bien.</p>
+    <p>El chat debería aparecer abajo a la derecha en 2–5 segundos.</p>
+
+    <div id="genesys-support-center"></div>
   </body>
 </html>
-``
